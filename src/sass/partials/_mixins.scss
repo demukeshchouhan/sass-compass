@@ -1,0 +1,79 @@
+@mixin background($color:transparent) {
+	background-color:$color;
+}
+
+@mixin box-shadow($opt...) {
+	-webkit-box-shadow:$opt;
+	-moz-box-shadow:$opt;
+		box-shadow:$opt;
+}
+
+@mixin clearfix{
+	&:before,
+	&:after{
+		content:"";
+		display: table;
+	}
+	&:after{
+		clear: both;
+	}
+	
+}
+
+@mixin imagegrid($qty, $margin) {
+
+	width:((100% - ($qty - 1) * $margin) / $qty);
+	&:nth-child(n){
+		margin-right: $margin;
+		margin-bottom: $margin;
+	}
+	
+	&:nth-child(#{$qty}n){
+		margin-right: 0;
+		margin-bottom: 0;
+	}
+}
+
+
+@mixin break($width...){
+	@if length($width) == 1{
+		@media (max-width: nth($width, 1)){
+			@content;
+		}
+	} @else {
+		@media (min-width:  nth($width, 1)) and (max-width:  nth($width, 2)){
+			@content;
+		}
+	}
+}
+
+
+
+@mixin arrow($dir, $width, $color) {
+	width : $width;
+	@if $dir == "up"{
+		border-top: $width/2 solid transparent;
+		border-right: $width/2 solid transparent;
+		border-bottom: $width/2 solid $color;
+		border-left: $width/2 solid transparent;
+	}
+	@if $dir == "down"{
+		border-top: $width/2 solid $color;
+		border-right: $width/2 solid transparent;
+		border-bottom: $width/2 solid transparent;
+		border-left: $width/2 solid transparent;
+	}
+	@if $dir == "left"{
+		border-top: $width/2 solid transparent;
+		border-right: $width/2 solid transparent;
+		border-bottom: $width/2 solid transparent;
+		border-left: $width/2 solid  $color;
+	}
+	@if $dir == "right"{
+		border-top: $width/2 solid transparent;
+		border-right: $width/2 solid $color;
+		border-bottom: $width/2 solid transparent;
+		border-left: $width/2 solid transparent;
+	}
+}
+

@@ -1,0 +1,43 @@
+.btn{
+	background: $gray_color;
+	padding: 6px 12px;
+	border-radius: 4px;
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+	color: darken($gray_color,50%);
+	vertical-align: middle;
+	user-select:none;
+	border:1px solid darken($gray_color,10%);
+	font-size: 1em;
+	outline:none;
+	
+	&:focus,
+	&:active{
+		box-shadow:0 0 20px lighten($blue_color,30%);
+	}
+	
+}
+
+.btn-default{
+	@extend .btn;
+	background: $gray_color;
+}
+.btn-cool{
+	@extend .btn;
+	background: $blue_color;
+	color:lighten($gray_color,25%);
+	border:none;
+}
+.btn-hot{
+	@extend .btn;
+	background: $red_color;
+	color:lighten($gray_color,25%);
+	border:none;
+}
+.btn-awesome{
+	@extend .btn;
+	background: $yellow_color;
+	color:lighten($gray_color,25%);
+	border:none;
+}

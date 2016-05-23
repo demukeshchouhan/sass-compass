@@ -1,0 +1,198 @@
+@import "./partials/variables";
+@import "./partials/base";
+@import "./partials/mixins";
+@import "./partials/interface";
+
+.media{
+	list-style: none;
+	
+	
+	.item{
+		padding: 20px 0;
+		border-top: 1px solid $yellow_color;
+		display: block;
+		a{
+			text-decoration: none !important;
+			
+			img{
+				float:left;
+				margin-right:20px;
+			}
+
+			p{
+				font-size:1.2em !important;
+
+			}
+		}
+		
+		&:hover{
+	    	@include background($gray_color);
+			@include box-shadow(0 0 55px lighten($yellow_color,42%));
+     	}
+		
+		@include clearfix;
+		
+	}
+}
+
+.grid{
+	@include clearfix;
+	.item{
+		float: left;
+		@include imagegrid(5, 1%);
+	}
+	img{
+		display: block;
+		border-radius:4px;
+		max-width: 100%;
+		padding: 4px;
+//		background: mix($blue_color, $yellow_color, 5%);
+//		background: grayscale($blue_color);
+		background: invert($blue_color);
+		border-radius: nth((10px, 20px), 2);
+	}
+}
+
+
+
+
+
+
+
+
+header{
+	background: $blue_color;
+	padding: 5px 0 0;
+	margin-bottom: 15px;
+    @include clearfix;
+
+		
+	
+	.branding{
+		float: left;
+		@include break(762px){
+			display: block;
+			float: none;
+			text-align: center;
+			background: lighten($blue_color, 15%);
+			margin-top:-5px;
+			padding: 15px 0;
+		};
+		
+		h1{
+			font-size: 1.4em;
+			color: $gray_color;
+			font-weight: 700;
+			line-height: 2;
+			
+		}
+	}
+	
+	ul{
+		list-style: none;
+		float: right;
+		@include break(550px, 762px){
+			float: none;
+			display: block;
+			background:$yellow_color; 
+		}
+		
+	}
+	
+	ul li{
+		float: left;
+		@include break(762px){
+			float: none;
+			width: 100%;
+			height: auto;
+		}
+		
+		a{
+			text-decoration: none;
+			font-size: 1.3em;
+			padding: 10px 15px;
+			line-height: 2;
+			
+			@include break(762px){
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+			&:hover{
+				background:lighten($blue_color, 1%);
+				border-bottom: 4px solid lighten($blue_color, 30%);
+				@include break(762px){
+				 border-bottom: none;
+				 background:lighten($blue_color, 3%);
+			}
+			}
+		}
+		
+		@for $color from 1 through length($color_loop){
+				&:nth-child(#{$color}) a{
+					color: lighten(nth($color_loop, $color), 25%);
+				}
+			}
+		
+		
+		
+	}
+	
+	
+}
+
+$grid-columns : 12;
+
+$grid-list : "a" , "b";
+
+.border{
+	@include arrow(left, 50px, fade-out(yellow,.5));
+}
+
+
+@for $i from 1 through $grid-columns {
+  .grid-#{$i} {
+	color:green;
+	}
+}
+@for $i from 1 to $grid-columns {
+  .grid-prefix-#{$i} { 
+	  color:red;
+	}
+}
+
+@each $i in $grid-list {
+	.grid-list-#{$i} { 
+	  color:fade-out(yellow,.5);
+	}
+}
+
+$j : 0;
+$grid : 12 + 1;
+@while $j < $grid  {
+	.while-#{$j} {
+		background:#e54;
+		width:percentage(1) ;
+	}
+	$j : $j + 1;
+}
+
+@each $p in (one black, two yellow) {
+	.#{nth($p, 1)}{
+		background: #{nth($p, 2)}
+	}
+}
+
+
+$list : (
+	a : "#f25",
+	b : "#e78",
+	c : "#d59",
+	d : "#0e5"
+);
+	
+	@each $key, $value in $list {
+		.ee-#{$key}{
+			background: $value;
+		}
+	}
