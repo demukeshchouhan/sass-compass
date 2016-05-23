@@ -1,0 +1,337 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #FFFBF0;
+  font-size: 1.4rem;
+  color: default_body_color;
+  font-family: 'Lato', sans-serif; }
+
+.container {
+  width: 100%;
+  max-width: 908px;
+  margin: 0 auto; }
+
+p {
+  font-weight: normal;
+  font-size: 1.4em; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: #ec584c; }
+
+a {
+  color: #3abb5d; }
+
+.btn, .btn-default, .btn-cool, .btn-hot, .btn-awesome {
+  background: #f5f5f5;
+  padding: 6px 12px;
+  border-radius: 4px;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  color: #767676;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid gainsboro;
+  font-size: 1em;
+  outline: none; }
+  .btn:focus, .btn-default:focus, .btn-cool:focus, .btn-hot:focus, .btn-awesome:focus, .btn:active, .btn-default:active, .btn-cool:active, .btn-hot:active, .btn-awesome:active {
+    box-shadow: 0 0 20px #d3e2fc; }
+
+.btn-default {
+  background: #f5f5f5; }
+
+.btn-cool {
+  background: #4285F4;
+  color: white;
+  border: none; }
+
+.btn-hot {
+  background: #EA4335;
+  color: white;
+  border: none; }
+
+.btn-awesome {
+  background: #FBBC05;
+  color: white;
+  border: none; }
+
+.media {
+  list-style: none; }
+  .media .item {
+    padding: 20px 0;
+    border-top: 1px solid #FBBC05;
+    display: block; }
+    .media .item a {
+      text-decoration: none !important; }
+      .media .item a img {
+        float: left;
+        margin-right: 20px; }
+      .media .item a p {
+        font-size: 1.2em !important; }
+    .media .item:hover {
+      background-color: #f5f5f5;
+      -webkit-box-shadow: 0 0 55px #fef5d8;
+      -moz-box-shadow: 0 0 55px #fef5d8;
+      box-shadow: 0 0 55px #fef5d8; }
+    .media .item:before, .media .item:after {
+      content: "";
+      display: table; }
+    .media .item:after {
+      clear: both; }
+
+.grid:before, .grid:after {
+  content: "";
+  display: table; }
+.grid:after {
+  clear: both; }
+.grid .item {
+  float: left;
+  width: 19.2%; }
+  .grid .item:nth-child(n) {
+    margin-right: 1%;
+    margin-bottom: 1%; }
+  .grid .item:nth-child(5n) {
+    margin-right: 0;
+    margin-bottom: 0; }
+.grid img {
+  display: block;
+  border-radius: 4px;
+  max-width: 100%;
+  padding: 4px;
+  background: #bd7a0b;
+  border-radius: 20px; }
+
+header {
+  background: #4285F4;
+  padding: 5px 0 0;
+  margin-bottom: 15px; }
+  header:before, header:after {
+    content: "";
+    display: table; }
+  header:after {
+    clear: both; }
+  header .branding {
+    float: left; }
+    @media (max-width: 762px) {
+      header .branding {
+        display: block;
+        float: none;
+        text-align: center;
+        background: #8ab4f8;
+        margin-top: -5px;
+        padding: 15px 0; } }
+    header .branding h1 {
+      font-size: 1.4em;
+      color: #f5f5f5;
+      font-weight: 700;
+      line-height: 2; }
+  header ul {
+    list-style: none;
+    float: right; }
+    @media (min-width: 550px) and (max-width: 762px) {
+      header ul {
+        float: none;
+        display: block;
+        background: #FBBC05; } }
+  header ul li {
+    float: left; }
+    @media (max-width: 762px) {
+      header ul li {
+        float: none;
+        width: 100%;
+        height: auto; } }
+    header ul li a {
+      text-decoration: none;
+      font-size: 1.3em;
+      padding: 10px 15px;
+      line-height: 2; }
+      @media (max-width: 762px) {
+        header ul li a {
+          display: block;
+          width: 100%;
+          height: auto; } }
+      header ul li a:hover {
+        background: #4788f4;
+        border-bottom: 4px solid #d3e2fc; }
+        @media (max-width: 762px) {
+          header ul li a:hover {
+            border-bottom: none;
+            background: #508ef5; } }
+    header ul li:nth-child(1) a {
+      color: #bad3fb; }
+    header ul li:nth-child(2) a {
+      color: #f6aea8; }
+    header ul li:nth-child(3) a {
+      color: #83d99a; }
+    header ul li:nth-child(4) a {
+      color: #fdde82; }
+    header ul li:nth-child(5) a {
+      color: white; }
+    header ul li:nth-child(6) a {
+      color: #d9d9d9; }
+
+.border {
+  width: 50px;
+  border-top: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 25px solid rgba(255, 255, 0, 0.5); }
+
+.grid-1 {
+  color: green; }
+
+.grid-2 {
+  color: green; }
+
+.grid-3 {
+  color: green; }
+
+.grid-4 {
+  color: green; }
+
+.grid-5 {
+  color: green; }
+
+.grid-6 {
+  color: green; }
+
+.grid-7 {
+  color: green; }
+
+.grid-8 {
+  color: green; }
+
+.grid-9 {
+  color: green; }
+
+.grid-10 {
+  color: green; }
+
+.grid-11 {
+  color: green; }
+
+.grid-12 {
+  color: green; }
+
+.grid-prefix-1 {
+  color: red; }
+
+.grid-prefix-2 {
+  color: red; }
+
+.grid-prefix-3 {
+  color: red; }
+
+.grid-prefix-4 {
+  color: red; }
+
+.grid-prefix-5 {
+  color: red; }
+
+.grid-prefix-6 {
+  color: red; }
+
+.grid-prefix-7 {
+  color: red; }
+
+.grid-prefix-8 {
+  color: red; }
+
+.grid-prefix-9 {
+  color: red; }
+
+.grid-prefix-10 {
+  color: red; }
+
+.grid-prefix-11 {
+  color: red; }
+
+.grid-list-a {
+  color: rgba(255, 255, 0, 0.5); }
+
+.grid-list-b {
+  color: rgba(255, 255, 0, 0.5); }
+
+.while-0 {
+  background: #e54;
+  width: 100%; }
+
+.while-1 {
+  background: #e54;
+  width: 100%; }
+
+.while-2 {
+  background: #e54;
+  width: 100%; }
+
+.while-3 {
+  background: #e54;
+  width: 100%; }
+
+.while-4 {
+  background: #e54;
+  width: 100%; }
+
+.while-5 {
+  background: #e54;
+  width: 100%; }
+
+.while-6 {
+  background: #e54;
+  width: 100%; }
+
+.while-7 {
+  background: #e54;
+  width: 100%; }
+
+.while-8 {
+  background: #e54;
+  width: 100%; }
+
+.while-9 {
+  background: #e54;
+  width: 100%; }
+
+.while-10 {
+  background: #e54;
+  width: 100%; }
+
+.while-11 {
+  background: #e54;
+  width: 100%; }
+
+.while-12 {
+  background: #e54;
+  width: 100%; }
+
+.one {
+  background: black; }
+
+.two {
+  background: yellow; }
+
+.ee-a {
+  background: "#f25"; }
+
+.ee-b {
+  background: "#e78"; }
+
+.ee-c {
+  background: "#d59"; }
+
+.ee-d {
+  background: "#0e5"; }
+
+
+
+/*# sourceMappingURL=maps/main.css.map */
